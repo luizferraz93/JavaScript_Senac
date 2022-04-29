@@ -1,0 +1,21 @@
+var input = require('readline-sync')
+
+var sintomas = parseInt (input.question ("Voce apresentou algum sintoma de covid nos ultimos 3 dias? 1. Sim 2. Não: "));
+var idade = parseInt(input.question("Por favor insira aqui a idade do paciente: "));
+
+if (sintomas === 1){
+    if (idade < 65){
+        console.log("Por favor, pegue uma ficha comum e vá para a sala vermelha");
+    }
+    else{
+        console.log("Por favor, pegue uma ficha preferencial e vá para a sala vermelha")
+    }
+}
+else{
+    if (idade < 65){
+        console.log("Por favor, pegue uma ficha comum e aguarde ser chamado no painel");
+    }
+    else{
+        console.log("Por favor, pegue uma ficha preferencial e aguarde ser chamado no painel");
+    }
+}
